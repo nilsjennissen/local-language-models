@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="local language models"
+description="Local Language Models"
+readme="README.md"
+
+[tool.isort]
+profile="black"
+src_paths=["."]
+
+[tool.pytest.ini_options]
+testpaths=["tests"]
+
+[tool.ruff]
+extend-ignore = ["E203"]
+line-lenght = 88
+target-version = 3.11
+
+[tool.poetry]
+name = "educator-ai"
+version = "0.1.0"
+description = "Local Language Models"
+authors = ["Nils Jennissen"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+streamlit = "^1.6.0"
